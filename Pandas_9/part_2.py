@@ -25,7 +25,7 @@ print(df)
 
 
 #  read csv
-df = pd.read_csv(r'C:\Users\hamza\Downloads\archive (1)\titanic.csv')
-df.head()  # first 5 rows
-df.tail()  # last 5 rows
+# df = pd.read_csv(r'C:\Users\hamza\Downloads\archive (1)\titanic.csv')
+# df.head()  # first 5 rows
+# df.tail()  # last 5 rows
 

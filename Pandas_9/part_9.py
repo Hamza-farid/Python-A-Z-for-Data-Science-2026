@@ -1,11 +1,18 @@
 import pandas as pd
 
-# pivot table
-df = pd.read_csv(r'C:\Users\hamza\Downloads\archive (1)\titanic.csv')
+# Create a DataFrame
+df = pd.DataFrame({
+    'class': ['5', '5', '6', '6'],
+    'section': ['X', 'Y', 'X', 'Y'],
+    'physics': [85, 90, 78, 88]
+})
 
-pd.pivot_table(df, index = 'class', columns = 'section', values = 'physics', aggfunc = 'mean')
-# aggfunc = sum etc
+# Pivot table: mean of 'physics' by 'class' and 'section'
+pivot = pd.pivot_table(df, index='class', columns='section', values='physics', aggfunc='mean')
+print("Pivot table (mean of physics by class and section):")
+print(pivot)
 
-
-
-pd.pivot_table(df,index='class')
+# Pivot table: mean of 'physics' by 'class' only
+pivot2 = pd.pivot_table(df, index='class', values='physics', aggfunc='mean')
+print("\nPivot table (mean of physics by class):")
+print(pivot2)
